@@ -1,0 +1,24 @@
+<head>
+  <link rel="show-detail.component.css" type="text/css" href="show-detail.component.css">
+</head>
+<body>
+<div>
+    
+  <div>
+    <span><b><div id="name">{{current?.showName}}</div></b><br></span> 
+      
+    <br>
+      <table>
+        <tr>
+          <td><div id ="image"><img src={{current?.Image}}/></div></td>
+          <td><div id ="summary">{{current?.summary}}</div></td>
+        </tr>
+      </table>
+  </div>
+</div>
+<div id ="time" >
+  <span >{{ current?.time}} {{current?.day}} <br>{{current?.NetworkName}}<br></span>
+</div>
+</body>
+
+
