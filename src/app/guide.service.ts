@@ -4,6 +4,7 @@ import { Time } from '@angular/common';
 import {environment} from 'src/environments/environment';
 import { Ishowdetail } from './ishowdetail';
 import {map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 interface IguideData {
   name:string,
@@ -13,6 +14,10 @@ interface IguideData {
   summary:string
   
   }
+  export interface IGuideService{
+    getShowName(search:string):Observable<Ishowdetail>
+
+  }
 
   
 
@@ -20,7 +25,7 @@ interface IguideData {
 @Injectable({
   providedIn: 'root'
 })
-export class GuideService {
+export class GuideService implements IGuideService {
 
 
   constructor(private httpClient:HttpClient) { }
